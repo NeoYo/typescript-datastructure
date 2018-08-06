@@ -9,11 +9,11 @@ class LinkedList<E> {
       this.head = new LinkedListNode(e);
       return;
     }
-    let nextNode = this.head;
-    while (nextNode.next !== undefined) {
-      nextNode = nextNode.next;
+    let prev = this.head;
+    while (prev.next !== undefined) {
+      prev = prev.next;
     }
-    nextNode.next = new LinkedListNode(e);
+    prev.next = new LinkedListNode(e);
   }
 }
 
