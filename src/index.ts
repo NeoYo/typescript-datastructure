@@ -6,5 +6,6 @@ function testLinkedList(nums:number[]) {
   });
   return linkedList;
 }
-const linkedList = testLinkedList([2, 3, 4, 5]);
+const linkedList = testLinkedList([0, 1, 2, 3]);
+linkedList.add(1, 6);
 console.log(linkedList);
