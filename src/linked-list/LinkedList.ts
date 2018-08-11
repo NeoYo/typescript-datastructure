@@ -20,39 +20,58 @@ class LinkedList<E> {
     ++this.size;
   }
 
+  public get(index:number) {
+    if(index < 0 || index > this.size) {
+      throw new RangeError(`The argument index must be between 0 and ${this.size}.`);;
+    }
+    let cur = this.dummyHead.next;
+    for (let i = 0; i < index; i++) {
+      cur = cur.next;
+    }
+    return cur;
+  }
+  
+  public contains(e:E) {
+    let cur = this.dummyHead.next;
+    while (cur !== undefined) {
+      if (cur.e === e) {
+        return true;
+      }
+      cur = cur.next;
+    }
+    return false;
+  }
+
   public getSize() {
     return this.size;
   }
 
-  public isEmpty(){
+  public isEmpty() {
     return this.size === 0;
   }
 
-  public addFirst(e:E){
+  public addFirst(e:E) {
     this.add(0, e);
   }
 
-  public addLast(e:E){
+  public addLast(e:E) {
     this.add(this.size, e);
   }
 
-  public get(index:number){
-    if(index < 0 || index > this.size) {
-      throw new RangeError(`The argument index must be between 0 and ${this.size}.`);;
-    }
-    let next = this.dummyHead.next;
-    for (let i = 0; i < index; i++) {
-      next = next.next;
-    }
-    return next;
+  public getFirst() {
+    this.get(0);
+  }
+
+  public getLast() {
+    this.get(this.size - 1);
   }
 
   public toString() {
-    let prev = this.dummyHead.next;
+    let cur = this.dummyHead.next;
     let str = '';
-    while (prev !== undefined) {
-      str += prev.e;
-      prev = prev.next;
+    while (cur !== undefined) {
+      str += cur.e;
+      cur = cur.next;
       str += ' --> ';
     }
     return str;
