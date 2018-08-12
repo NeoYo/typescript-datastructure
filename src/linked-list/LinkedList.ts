@@ -6,10 +6,8 @@ class LinkedList<E> {
   constructor() {
   }
 
-  public add(index:number, e:E){
-    if(index < 0 || index > this.size) {
-      throw new RangeError(`The argument index must be between 0 and ${this.size}.`);;
-    }
+  public add(index:number, e:E) {
+    this.checkIndexRange(index);
     let prev = this.dummyHead;
     for (let i = 0; i < index; i++) {
       prev = prev.next;
@@ -21,14 +19,25 @@ class LinkedList<E> {
   }
 
   public get(index:number) {
-    if(index < 0 || index > this.size) {
-      throw new RangeError(`The argument index must be between 0 and ${this.size}.`);;
-    }
+    this.checkIndexRange(index);
     let cur = this.dummyHead.next;
     for (let i = 0; i < index; i++) {
       cur = cur.next;
     }
     return cur;
+  }
+
+  // TODO: Memory manager for delete element
+  public remove(index:number) {
+    this.checkIndexRange(index);
+    let prev = this.dummyHead;
+    for (let i = 0; i < index; i++) {
+      prev = prev.next;
+    }
+    const removeE = prev.next.e;
+    prev.next = prev.next.next;
+    --this.size;
+    return removeE;
   }
   
   public contains(e:E) {
@@ -58,12 +67,20 @@ class LinkedList<E> {
     this.add(this.size, e);
   }
 
+  public removeFirst() {
+    return this.remove(0);
+  }
+
+  public removeLast() {
+    return this.remove(this.size - 1);
+  }
+
   public getFirst() {
-    this.get(0);
+    return this.get(0).e;
   }
 
   public getLast() {
-    this.get(this.size - 1);
+    return this.get(this.size - 1).e;
   }
 
   public toString() {
@@ -75,6 +92,12 @@ class LinkedList<E> {
       str += ' --> ';
     }
     return str;
+  }
+
+  private checkIndexRange(index: number) {
+    if (index < 0 || index > this.size) {
+      throw new RangeError(`The argument index must be between 0 and ${this.size}.`);
+    }
   }
 }
 
