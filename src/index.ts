@@ -14,7 +14,7 @@ console.log(`${linkedList}`);
 console.log(`${linkedList.get(5)}`);
 
 function testStack(nums:number[]) {
-  const stack = new StackFactory().getStack(StackType.LinkedListStack);
+  const stack = new StackFactory().getStack(StackType.ArrayStack);
   nums.forEach(num => {
     stack.push(num);
   });
@@ -22,6 +22,7 @@ function testStack(nums:number[]) {
 }
 console.log('------------ StackTest ------------')
 const stack = testStack([6, 5, 4, 3, 2, 1, 0]);
+console.log(`Stack: ${stack.toString()}`);
 while (!stack.isEmpty()) {
   console.log(stack.pop());
 }

@@ -19,6 +19,9 @@ class ArrayStack<E> implements Stack<E>{
   isEmpty(): boolean {
     return this.array.length === 0;
   }
+  toString() {
+    return this.array.toString();
+  }
 }
 
 export {
