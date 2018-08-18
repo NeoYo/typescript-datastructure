@@ -88,10 +88,10 @@ class LinkedList<E> {
     let str = '';
     while (cur !== undefined) {
       str += cur.e;
+      str += ',';
       cur = cur.next;
-      str += ' --> ';
     }
-    return str;
+    return str.slice(0, -1);
   }
 
   private checkIndexRange(index: number) {

@@ -7,6 +7,7 @@ export interface Stack<E> {
   peek():E;
   getSize():number;
   isEmpty():boolean;
+  toString():string;
 }
 
 export enum StackType {

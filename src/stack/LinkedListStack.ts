@@ -20,4 +20,7 @@ export class LinkedListStack<E> implements Stack<E> {
   isEmpty() {
     return this.list.isEmpty();
   }
+  toString() {
+    return this.list.toString();
+  }
 }
