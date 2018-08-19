@@ -1,6 +1,6 @@
 import { Stack } from "./Stack";
 
-class ArrayStack<E> implements Stack<E>{
+export class ArrayStack<E> implements Stack<E>{
   private array:E[] = [];
   constructor() {
   }
@@ -22,8 +22,4 @@ class ArrayStack<E> implements Stack<E>{
   toString() {
     return this.array.toString();
   }
-}
-
-export {
-  ArrayStack,
 }
