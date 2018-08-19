@@ -4,5 +4,6 @@
 
 ```bash
 yarn test
-yarn test --verbose 
+yarn test -v  // yarn test --verbose
+yarn test -w  // yarn test --watch
 ```

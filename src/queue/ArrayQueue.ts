@@ -5,16 +5,16 @@ export class ArrayQueue<E> implements Queue<E> {
   public add(e:E) {
     this.array.push(e);
   }
-  remove() {
+  public remove() {
     return this.array.shift();
   }
-  peek():E {
+  public peek():E {
     return this.array[0];
   }
-  isEmpty() {
+  public isEmpty() {
     return this.array.length === 0;
   }
-  toString() {
+  public toString() {
     return this.array.toString();
   }
 }
