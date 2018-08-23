@@ -3,8 +3,8 @@ import { ArrayStack } from "./ArrayStack";
 
 export interface Stack<E> {
   push(e:E):void;
-  pop():E;
-  peek():E;
+  pop():E|undefined;
+  peek():E|undefined;
   getSize():number;
   isEmpty():boolean;
   toString():string;
@@ -17,10 +17,10 @@ export enum StackType {
 export class StackFactory {
   constructor() {
   }
-  public getStack(stackType:StackType = StackType.LinkedListStack) {
+  public getStack<E>(stackType:StackType = StackType.LinkedListStack): Stack<E> {
     if (stackType === StackType.ArrayStack) {
-      return new ArrayStack();
+      return new ArrayStack<E>();
     }
-    return new LinkedListStack();
+    return new LinkedListStack<E>();
   }
 }

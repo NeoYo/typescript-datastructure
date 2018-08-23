@@ -7,10 +7,10 @@ export class ArrayStack<E> implements Stack<E>{
   push(e:E): void {
     this.array.push(e);
   }
-  pop(): E {
+  pop() {
     return this.array.pop();
   }
-  peek(): E {
+  peek() {
     return this.array[this.array.length - 1];
   }
   getSize(): number {
