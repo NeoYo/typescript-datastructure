@@ -1,6 +1,9 @@
 # typescript-datastructure
 
-### Run test
+## Debug with VSCode
+  Click Debug button then choose `Debug` configuration
+
+## Run test
 
 ```bash
 yarn test
