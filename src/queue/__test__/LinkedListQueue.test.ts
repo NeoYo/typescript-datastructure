@@ -24,7 +24,6 @@ test('LinkedListQueue should remove number', t => {
   t.is(queue.toString(), '3');
   t.is(queue.remove(), 3);
   t.is(queue.toString(), '');
-  // TODO: fix me for return undefined when empty
-  // t.is(queue.remove(), undefined);
+  t.is(queue.remove(), undefined);
 });
 
