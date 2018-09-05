@@ -1,13 +1,13 @@
-import { LinkedListStack } from "./LinkedListStack";
-import { ArrayStack } from "./ArrayStack";
+import { LinkedListStack } from './LinkedListStack';
+import { ArrayStack } from './ArrayStack';
 
 export interface Stack<E> {
-  push(e:E):void;
-  pop():E|undefined;
-  peek():E|undefined;
-  getSize():number;
-  isEmpty():boolean;
-  toString():string;
+  push(e:E) : void;
+  pop() : E|undefined;
+  peek() : E|undefined;
+  getSize() : number;
+  isEmpty() : boolean;
+  toString() : string;
 }
 
 export enum StackType {

@@ -1,4 +1,4 @@
-import { LinkedListNode } from "./LinkedListNode";
+import { LinkedListNode } from './LinkedListNode';
 
 class LinkedList<E> {
   private dummyHead = new LinkedListNode<E>();
@@ -42,7 +42,7 @@ class LinkedList<E> {
     --this.size;
     return removeE;
   }
-  
+
   public contains(e:E) {
     let cur = this.dummyHead.next;
     while (cur !== undefined) {
@@ -97,7 +97,7 @@ class LinkedList<E> {
     return str.slice(0, -1);
   }
 
-  private checkIndexRange(index: number) {
+  private checkIndexRange(index:number) {
     if (index < 0 || index > this.size) {
       throw new RangeError(`The argument index must be between 0 and ${this.size}.`);
     }
@@ -105,5 +105,5 @@ class LinkedList<E> {
 }
 
 export {
-  LinkedList
-}
+  LinkedList,
+};

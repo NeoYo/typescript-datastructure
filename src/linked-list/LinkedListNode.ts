@@ -11,4 +11,4 @@ class LinkedListNode<E> {
 
 export {
   LinkedListNode,
-}
+};

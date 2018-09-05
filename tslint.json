@@ -73,5 +73,10 @@
     "quotemark": [true, "single", "avoid-escape"],
     "semicolon": [true, "always"],
     "variable-name": [true, "ban-keywords"]
+  },
+  "linterOptions": {
+      "exclude": [
+          "*.test.js"
+      ]
   }
 }
