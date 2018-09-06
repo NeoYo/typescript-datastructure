@@ -17,7 +17,7 @@ export enum StackType {
 export class StackFactory {
   constructor() {
   }
-  public getStack<E>(stackType:StackType = StackType.LinkedListStack): Stack<E> {
+  public getStack<E>(stackType:StackType = StackType.LinkedListStack) : Stack<E> {
     if (stackType === StackType.ArrayStack) {
       return new ArrayStack<E>();
     }

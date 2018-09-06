@@ -11,10 +11,10 @@ class LinkedListQueue<E> implements Queue<E> {
     return this.linkedList.removeFirst();
   }
   peek(): E {
-    throw new Error("Method not implemented.");
+    return this.linkedList.getFirst();
   }
   isEmpty(): boolean {
-    throw new Error("Method not implemented.");
+    return this.linkedList.isEmpty();
   }
   toString(): string {
     return this.linkedList.toString();

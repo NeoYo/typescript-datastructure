@@ -75,8 +75,12 @@
     "variable-name": [true, "ban-keywords"]
   },
   "linterOptions": {
-      "exclude": [
-          "*.test.js"
-      ]
+    "exclude": [
+      "node_modules",
+      "dist",
+      "**/*.test.ts",
+      "**/__test__/*", //exclude all that *__test*
+      "**/*.spec.ts",
+    ]
   }
 }
