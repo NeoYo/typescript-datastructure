@@ -21,6 +21,7 @@
     ]
   },
   "scripts": {
-    "test": "ava"
+    "watch": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/index.ts",
+    "test": "tsc && ava"
   }
 }
