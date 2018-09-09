@@ -34,7 +34,7 @@ test('LinkedListQueue should peek number', t => {
   t.is(queue.peek(), 1);
 });
 
-test('ArrayQueue is Empty', t => {
+test('LinkedListQueue is Empty', t => {
   const nums = [1, 2];
   const queue = linkedListQueueFromNumbers(nums);
   queue.remove();
