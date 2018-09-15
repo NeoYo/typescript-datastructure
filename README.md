@@ -1,7 +1,10 @@
 # typescript-datastructure
 
+## Watch
+We could run `yarn watch` to test our datastructure real time, and use of `console.time` and `console.timeEnd` which could't be test in `ava`.
+
 ## Debug with VSCode
-  Click Debug button then choose `Debug` configuration
+  Click Debug button in the left menu, then choose `Debug` configuration.
 
 ## Run test
 
