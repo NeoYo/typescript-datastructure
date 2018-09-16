@@ -3,10 +3,15 @@ import { LinkedListNode } from './LinkedListNode';
 class LinkedList<E> {
   private dummyHead = new LinkedListNode<E>();
   private size:number = 0;
+  private last = this.dummyHead;
   constructor() {
   }
 
   public add(index:number, e:E) {
+    if (index === this.size) {
+      this.addLast(e);
+      return;
+    }
     this.checkIndexRange(index);
     let prev = this.dummyHead;
     for (let i = 0; i < index; i++) {
@@ -67,7 +72,10 @@ class LinkedList<E> {
   }
 
   public addLast(e:E) {
-    this.add(this.size, e);
+    const prev = this.last;
+    this.last = new LinkedListNode(e);
+    prev.next = this.last;
+    ++this.size;
   }
 
   public removeFirst() {
