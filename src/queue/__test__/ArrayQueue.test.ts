@@ -42,4 +42,3 @@ test('ArrayQueue is Empty', t => {
   queue.remove();
   t.is(queue.isEmpty(), true);
 });
-

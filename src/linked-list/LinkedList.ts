@@ -34,10 +34,10 @@ class LinkedList<E> {
 
   // TODO: Memory manager for delete element
   public remove(index:number) {
-    this.checkIndexRange(index);
     if (this.size === 0) {
       return undefined;
     }
+    this.checkIndexRange(index);
     let prev = this.dummyHead;
     for (let i = 0; i < index; i++) {
       prev = prev.next;
