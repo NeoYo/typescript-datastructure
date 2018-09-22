@@ -29,7 +29,7 @@ class LinkedList<E> {
     for (let i = 0; i < index; i++) {
       cur = cur.next;
     }
-    return cur;
+    return cur.e;
   }
 
   // TODO: Memory manager for delete element
@@ -87,11 +87,11 @@ class LinkedList<E> {
   }
 
   public getFirst() {
-    return this.get(0).e;
+    return this.get(0);
   }
 
   public getLast() {
-    return this.get(this.size - 1).e;
+    return this.get(this.size - 1);
   }
 
   public toString() {

@@ -29,10 +29,12 @@ test('LinkedList should removeLast number', t => {
 });
 
 test('LinkedList should get number', t => {
-  const nums = [1, 2, 3];
+  const nums = [1, 2, 3, 4];
   const queue = linkedListFromNumbers(nums);
   t.is(queue.getFirst(), 1);
-  t.is(queue.getLast(), 3);
+  t.is(queue.getLast(), 4);
+  t.is(queue.get(2), 3);
+  t.is(queue.get(3), 4);
 });
 
 test('LinkedList is Empty', t => {
